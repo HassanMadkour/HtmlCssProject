@@ -37,7 +37,12 @@
     <!-- Hero Section-->
     <section class="hero-section">
       <section class="hero-video-section">
-        <video src="./assets/media/course-video.mp4" autoplay loop></video>
+        <video
+          src="./assets/media/course-video.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
       </section>
       <section class="hero-content">
         <h6>Graduate school of management</h6>
@@ -317,7 +322,7 @@
 
         <figcaption class="video-caption">
           <h4>Power HTML Template</h4>
-          <a href=""><div class="video-circle"></div></a>
+          <a href=""><div class="video-circle">.</div></a>
         </figcaption>
       </figure>
 
@@ -329,8 +334,12 @@
       <h2>Let’s Keep In Touch</h2>
       <section class="contact-body">
         <section class="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
+          <div class="input-holder">
+            <input type="text" placeholder="Your Name" />
+          </div>
+          <div class="input-holder">
+            <input type="email" placeholder="Your Name" />
+          </div>
           <textarea
             name="mess"
             id="mess"
@@ -341,10 +350,9 @@
         </section>
         <figure class="contact-map">
           <iframe
+            title="My-Place"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27519.587154889665!2d30.92959821224211!3d30.43756481447479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14587d93858aab9b%3A0x547527b5d14088b6!2z2LPYr9mI2K_YjCDZhdmG2YjZgdiMINmF2K3Yp9mB2LjYqSDYp9mE2YXZhtmI2YHZitip!5e0!3m2!1sar!2seg!4v1743726055246!5m2!1sar!2seg"
             allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </figure>
         <div class="clear"></div>

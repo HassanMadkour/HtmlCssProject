@@ -138,6 +138,7 @@ header nav>ul li:hover {
 
 #about-us-li:hover {
     ul {
+        padding: 0;
         background-color: #1a2238;
         position: absolute;
         top: 30px;
@@ -147,6 +148,7 @@ header nav>ul li:hover {
     }
 
     li {
+        list-style: none;
         line-height: 1;
         letter-spacing: normal;
         width: 100px;
@@ -157,6 +159,12 @@ header nav>ul li:hover {
         border: none;
     }
 
+
+
+}
+
+#about-us-li li:hover {
+    background-color: #EDA61A;
 }
 
 #about-us-li {
@@ -180,7 +188,12 @@ header nav>ul li:hover {
 }
 
 .hero-video-section, .hero-video-section video {
+    min-width: 100%;
     min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+
 
 }
 
@@ -739,13 +752,28 @@ header nav>ul li:hover {
     width: 48%;
 }
 
-.contact-form input {
-    width: 47%;
+.contact-form .input-holder {
+    width: 50%;
+
     box-sizing: border-box;
 }
 
-.contact-form input:first-of-type {
-    margin-right: 20px;
+.contact-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.contact-form .input-holder:first-of-type {
+    padding-right: 10px;
+    float: left;
+}
+
+.contact-form .input-holder:last-of-type {
+    padding-left: 10px;
+
+    float: right;
 }
 
 .contact-form textarea {
@@ -757,9 +785,9 @@ header nav>ul li:hover {
 }
 
 .contact-map {
+    width: 49%;
     margin: 0;
     float: right;
-    width: 48%;
     height: 413px;
 }
 
