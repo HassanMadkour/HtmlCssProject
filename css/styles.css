@@ -21,6 +21,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     margin: 0px;
     padding: 0px;
 }
@@ -49,6 +50,25 @@ a {
     border: none;
     font-size: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+input, textarea {
+    padding: 0 12px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    height: 40px;
+    display: inline-block;
+    outline: 0;
+    background-color: rgba(250, 250, 250, 0.2);
+    border: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #fffefebe;
+    font-weight: 400;
+    letter-spacing: .6px;
+    line-height: 1.5;
 
 }
 
@@ -123,6 +143,7 @@ header nav>ul li:hover {
         top: 30px;
         left: 0px;
         display: block;
+        z-index: 10;
     }
 
     li {
@@ -291,13 +312,13 @@ header nav>ul li:hover {
 
 /* about section  */
 /* ---- why choose section  */
-.why-choose-section {
+.emj-back-with-header {
     position: relative;
     padding: 100px 60px;
     background-image: url("../assets/images/choosing-bg.jpg");
 }
 
-.why-choose-section h2 {
+.emj-back-with-header h2 {
     position: absolute;
     left: 50%;
     top: 115px;
@@ -313,7 +334,7 @@ header nav>ul li:hover {
     border: 2px solid rgba(250, 250, 250, 0.1);
 }
 
-.why-choose-section h2::before {
+.emj-back-with-header h2::before {
     position: absolute;
     top: -102px;
     left: 50%;
@@ -324,9 +345,9 @@ header nav>ul li:hover {
 }
 
 .tab {
-    text-align: center;
     position: relative;
     display: inline-block;
+    transform: translateX(50%);
     width: 30%;
     text-transform: uppercase;
     font-size: 13px;
@@ -342,8 +363,8 @@ header nav>ul li:hover {
 
 .tab::after {
     position: absolute;
-    top: 100%;
-    left: calc(50% - 7px);
+    top: 150%;
+    left: 70px;
     margin: 10px 0;
     content: "";
     width: 10px;
@@ -439,7 +460,12 @@ header nav>ul li:hover {
     float: right;
     color: white;
     width: 35%;
+
+    input {
+        width: 100%;
+    }
 }
+
 
 .register-title {
     padding: 40px;
@@ -460,26 +486,9 @@ header nav>ul li:hover {
     background-color: rgba(250, 250, 250, 0.1);
 }
 
-.register-form input {
-    padding: 0 12px;
-    margin-bottom: 20px;
-    line-height: 1.5;
 
-    width: 100%;
-    height: 40px;
-    display: block;
-    outline: 0;
-    background-color: rgba(250, 250, 250, 0.2);
-    border: none;
-}
 
-.register-form input::placeholder {
-    color: #fffefebe;
-    font-weight: 400;
-    letter-spacing: .6px;
-    line-height: 1.5;
 
-}
 
 .register-form button {
     display: inline-block;
@@ -513,4 +522,265 @@ header nav>ul li:hover {
     font-weight: 500;
     font-size: 18px;
     text-transform: uppercase;
+}
+
+/* courses section  */
+.courses-section.emj-back-with-header {
+    padding: 15px;
+}
+
+.courses-section .courses-container {
+    overflow: hidden;
+    width: 100%;
+    margin: 200px 0 50px 0;
+    white-space: nowrap;
+    vertical-align: top;
+
+}
+
+.course-card {
+    white-space: normal;
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 30px;
+    width: 215px;
+    border-radius: 5px;
+    background-color: white;
+
+    .course-content {
+        padding: 30px;
+    }
+}
+
+
+.course-card h4 {
+    margin: 0 0 20px 0;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #1e1e1e;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.course-card p {
+
+    margin: 0;
+    font-size: 13px;
+    line-height: 22px;
+
+}
+
+.course-card-img {
+    height: 151px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.card-footer {
+    margin-top: 25px;
+}
+
+.card-footer a {
+    float: right;
+    margin-top: 15px;
+    color: #7a7a7a;
+    font-size: 13px;
+}
+
+.card-footer a::after {
+    content: "\f101";
+    font-family: 'FontAwesome';
+    font-size: 11px;
+
+
+}
+
+
+.instructor-img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.indicators-container {
+    width: 10%;
+    margin: 20px auto;
+    transform: translateX(25%);
+}
+
+.indicator {
+    display: inline-block;
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+
+/* presentation-section  */
+
+.presentation-section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 3%;
+    background-image: url("../assets/images/video-bg.jpg");
+}
+
+.presentation-content {
+    margin-top: 60px;
+    padding: 0 20px 0 40px;
+    box-sizing: border-box;
+    float: left;
+    width: 46%;
+    color: white;
+
+    span {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    h4 {
+        margin-top: 20px;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+}
+
+.presentation-video-container {
+    position: relative;
+    float: right;
+    width: 46%;
+}
+
+.presentation-video-container img {
+    width: 100%;
+}
+
+.presentation-video-container .video-caption {
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.75);
+    position: absolute;
+    bottom: 0;
+}
+
+.video-caption h4 {
+    float: left;
+    padding: 0 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.video-caption .video-circle {
+    margin: 10px 20px;
+    float: right;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #EDA61A;
+}
+
+.video-caption .video-circle::after {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    background-color: transparent;
+    top: 18px;
+    left: 25px;
+    content: "";
+    border-left: 15px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+}
+
+/* contact section  */
+
+.contact-section.emj-back-with-header {
+    background-image: url("../assets/images/contact-bg.jpg");
+}
+
+.contact-body {
+    margin-top: 120px;
+}
+
+.contact-form {
+    overflow: hidden;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    background-color: rgba(250, 250, 250, 0.1);
+    float: left;
+    width: 48%;
+}
+
+.contact-form input {
+    width: 47%;
+    box-sizing: border-box;
+}
+
+.contact-form input:first-of-type {
+    margin-right: 20px;
+}
+
+.contact-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 220px;
+    max-height: 280px;
+    min-height: 220px;
+}
+
+.contact-map {
+    margin: 0;
+    float: right;
+    width: 48%;
+    height: 413px;
+}
+
+.contact-map iframe {
+    border: none;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* footer section  */
+
+footer {
+    padding: 30px 20px;
+    border-top: 2px solid white;
+    background-color: #0c1228;
+    color: white;
+
+    p {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0;
+    }
 }
