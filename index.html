@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/all.min.css" />
 
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -16,9 +17,9 @@
       </section>
       <nav class="navigation">
         <ul>
-          <li><a href="">Home </a></li>
+          <li><a href="#hero">Home </a></li>
           <li id="about-us-li">
-            <a href="" id="about-us-a"> About us </a>
+            <a href="#about" id="about-us-a"> About us </a>
             <ul>
               <li><a href="">who we are?</a></li>
               <li><a href="">how we do?</a></li>
@@ -26,16 +27,16 @@
               <li><a href="">external url</a></li>
             </ul>
           </li>
-          <li><a href="">courses </a></li>
-          <li><a href="">contact </a></li>
-          <li><a href="">external </a></li>
+          <li><a href="#courses">courses </a></li>
+          <li><a href="#contact">contact </a></li>
+          <li><a href="./index.html">external </a></li>
         </ul>
       </nav>
       <div class="clear"></div>
     </header>
 
     <!-- Hero Section-->
-    <section class="hero-section">
+    <section class="hero-section section" id="hero">
       <section class="hero-video-section">
         <video
           src="./assets/media/course-video.mp4"
@@ -52,39 +53,45 @@
       <section class="feature-hero-section">
         <section class="feature-card" id="course-feature">
           <h4>All courses</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-            debitis explicabo consectetur tempore! Quo quam numquam, vitae quia
-            distinctio earum magnam tempore, impedit ratione sed praesentium.
-            Deserunt reiciendis vel omnis.
-          </p>
-          <a href="">Read more</a>
+          <section class="details-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              debitis explicabo consectetur tempore! Quo quam numquam, vitae
+              quia distinctio earum magnam tempore, impedit ratione sed
+              praesentium. Deserunt reiciendis vel omnis.
+            </p>
+            <a href="">Read more</a>
+          </section>
         </section>
         <section class="feature-card" id="virtual-feature">
           <h4>virtual class</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-            debitis explicabo consectetur tempore! Quo quam numquam, vitae quia
-            distinctio earum magnam tempore, impedit ratione sed praesentium.
-            Deserunt reiciendis vel omnis.
-          </p>
-          <a href="">Read more</a>
+          <section class="details-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              debitis explicabo consectetur tempore! Quo quam numquam, vitae
+              quia distinctio earum magnam tempore, impedit ratione sed
+              praesentium. Deserunt reiciendis vel omnis.
+            </p>
+            <a href="">Read more</a>
+          </section>
         </section>
         <section class="feature-card" id="meeting-feature">
           <h4>Real meeting</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-            debitis explicabo consectetur tempore! Quo quam numquam, vitae quia
-            distinctio earum magnam tempore, impedit ratione sed praesentium.
-            Deserunt reiciendis vel omnis.
-          </p>
-          <a href="">Read more</a>
+          <section class="details-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              debitis explicabo consectetur tempore! Quo quam numquam, vitae
+              quia distinctio earum magnam tempore, impedit ratione sed
+              praesentium. Deserunt reiciendis vel omnis.
+            </p>
+            <a href="">Read more</a>
+          </section>
         </section>
       </section>
     </section>
 
     <!-- about section  -->
-    <section class="About-section">
+    <section class="About-section section" id="about">
       <section class="why-choose-section emj-back-with-header">
         <h2>Why choose Grad School?</h2>
 
@@ -94,6 +101,7 @@
             <div class="tab">Top Management</div>
             <div class="tab">quality meeting</div>
           </section>
+
           <section class="tab-details">
             <section class="tab-img-holder">
               <img src="./assets/images/choose-us-image-01.png" alt="" />
@@ -110,8 +118,45 @@
             </section>
             <div class="clear"></div>
           </section>
+
+          <section class="tab-details">
+            <section class="tab-img-holder">
+              <img src="./assets/images/choose-us-image-02.png" alt="" />
+            </section>
+            <section class="tab-details-content">
+              <h4>Top Level</h4>
+              <p>
+                You can modify this HTML layout by editing contents and adding
+                more pages as you needed. Since this template has options to add
+                dropdown menus, you can put many HTML pages.
+              </p>
+              <p>
+                Suspendisse tincidunt, magna ut finibus rutrum, libero dolor
+                euismod odio, nec interdum quam felis non ante.
+              </p>
+            </section>
+            <div class="clear"></div>
+          </section>
+
+          <section class="tab-details">
+            <section class="tab-img-holder">
+              <img src="./assets/images/choose-us-image-03.png" alt="" />
+            </section>
+            <section class="tab-details-content">
+              <h4>Quality Meeting</h4>
+              <p>
+                You are NOT allowed to redistribute this template ZIP file on
+                any template collection website. However, you can use this
+                template to convert into a specific theme for any kind of CMS
+                platform such as WordPress. For more information, you shall
+                <a href="">contact TemplateMo</a> now
+              </p>
+            </section>
+            <div class="clear"></div>
+          </section>
         </section>
       </section>
+
       <section class="register">
         <section class="time-section">
           <h2>
@@ -155,7 +200,7 @@
     </section>
 
     <!-- courses section  -->
-    <section class="courses-section emj-back-with-header">
+    <section class="courses-section emj-back-with-header section" id="courses">
       <h2>Choose your course</h2>
 
       <section class="courses-container">
@@ -180,10 +225,10 @@
         </section>
         <section class="course-card">
           <div class="course-card-img">
-            <img src="./assets/images/courses-01.jpg" alt="img" />
+            <img src="./assets/images/courses-02.jpg" alt="img" />
           </div>
           <section class="course-content">
-            <h4>Web</h4>
+            <h4>course two</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
               perspiciatis ipsam doloremque earum corporis dolore.
@@ -199,10 +244,10 @@
         </section>
         <section class="course-card">
           <div class="course-card-img">
-            <img src="./assets/images/courses-01.jpg" alt="img" />
+            <img src="./assets/images/courses-03.jpg" alt="img" />
           </div>
           <section class="course-content">
-            <h4>Art</h4>
+            <h4>Science</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
               perspiciatis ipsam doloremque earum corporis dolore.
@@ -218,7 +263,7 @@
         </section>
         <section class="course-card">
           <div class="course-card-img">
-            <img src="./assets/images/courses-01.jpg" alt="img" />
+            <img src="./assets/images/courses-04.jpg" alt="img" />
           </div>
           <section class="course-content">
             <h4>Web Development</h4>
@@ -237,10 +282,10 @@
         </section>
         <section class="course-card">
           <div class="course-card-img">
-            <img src="./assets/images/courses-01.jpg" alt="img" />
+            <img src="./assets/images/courses-05.jpg" alt="img" />
           </div>
           <section class="course-content">
-            <h4>Web Development</h4>
+            <h4>Electrical</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
               perspiciatis ipsam doloremque earum corporis dolore.
@@ -330,7 +375,7 @@
     </section>
 
     <!-- contact section -->
-    <section class="contact-section emj-back-with-header">
+    <section class="contact-section emj-back-with-header section" id="contact">
       <h2>Let’s Keep In Touch</h2>
       <section class="contact-body">
         <section class="contact-form">
@@ -358,10 +403,12 @@
         <div class="clear"></div>
       </section>
     </section>
+
     <!-- footer section  -->
     <footer>
       <p>&copy; Copyright 2025 by Hassan Madkour | Design: Hassan</p>
     </footer>
+
     <script src="./js/main.js"></script>
 
     <!-- <script

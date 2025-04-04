@@ -1,0 +1,58 @@
+@keyframes move {
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fromRightAnimation {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromLeftAnimation {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromTopAnimation {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottomAnimation {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.course-card {
+    animation: move .5s ease-in-out infinite forwards;
+}
+
+/* .course-card.run-animation {
+    animation-play-state: running;
+} */
+
+.course-card.pause-animation {
+    animation-play-state: paused;
+}

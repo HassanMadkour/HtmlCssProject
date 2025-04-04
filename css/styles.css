@@ -13,11 +13,12 @@
 
 :root {
     --primary-color: #1a2238;
-    --secondary-color: #EDA61A;
+    --secondary-color: #eda61a;
 }
 
 html {
     font-family: Georgia;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +30,6 @@ body {
 ul {
     margin: 0;
     list-style-type: none;
-
 }
 
 ul li {
@@ -43,17 +43,18 @@ a {
 }
 
 .btn {
+    cursor: pointer;
     padding: 15px 25px;
     text-transform: uppercase;
     color: white;
-    background-color: #EDA61A;
+    background-color: #eda61a;
     border: none;
     font-size: 13px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 0 12px;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -64,23 +65,26 @@ input, textarea {
     border: none;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #fffefebe;
     font-weight: 400;
-    letter-spacing: .6px;
+    letter-spacing: 0.6px;
     line-height: 1.5;
-
 }
 
 em {
-    color: #EDA61A;
+    color: #eda61a;
     font-style: normal;
-
 }
 
 /*----Header ----*/
 
 header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
     z-index: 12;
     background-color: var(--primary-color);
     color: white;
@@ -91,14 +95,11 @@ header {
 header .logo-container {
     font-size: 36px;
     line-height: 1;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0px;
-
-
 }
-
 
 header {
     nav {
@@ -112,26 +113,22 @@ header {
     nav>ul li {
         padding: 10px 15px;
         text-transform: uppercase;
-        line-height: .6;
+        line-height: 0.6;
         font-size: 12px;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
         font-weight: 700;
-        transition: all .5s;
+        transition: all 0.5s;
         border: 2px solid transparent;
-
     }
-
 }
 
-
-
-
-header nav>ul li:hover {
+header nav>ul li:hover,
+.selected-nav {
     border: 2px solid var(--secondary-color);
 }
 
 #about-us-a::after {
-    content: '\f107';
+    content: "\f107";
     font-family: "FontAwesome";
     margin: 0px 5px;
 }
@@ -158,13 +155,10 @@ header nav>ul li:hover {
         margin: 10px;
         border: none;
     }
-
-
-
 }
 
 #about-us-li li:hover {
-    background-color: #EDA61A;
+    background-color: #eda61a;
 }
 
 #about-us-li {
@@ -179,22 +173,21 @@ header nav>ul li:hover {
     clear: both;
 }
 
+/*-----------------------------------------*/
 /* Hero-section  */
 .hero-section {
     height: calc(100vh - 70px);
     position: relative;
     overflow: hidden;
-
 }
 
-.hero-video-section, .hero-video-section video {
+.hero-video-section,
+.hero-video-section video {
     min-width: 100%;
     min-height: 100vh;
     max-width: 100%;
     max-height: 100vh;
     object-fit: cover;
-
-
 }
 
 .hero-section .hero-video-section::before {
@@ -212,6 +205,7 @@ header nav>ul li:hover {
     left: 50%;
     transform: translate(-50%, -60%);
     z-index: 1;
+    overflow: hidden;
 }
 
 .hero-section .hero-content h2 {
@@ -221,6 +215,7 @@ header nav>ul li:hover {
     font-weight: 800;
     color: #fff;
     letter-spacing: 1px;
+    transform: translateY(200%);
 }
 
 .hero-section .hero-content h6 {
@@ -230,20 +225,22 @@ header nav>ul li:hover {
     font-weight: 600;
     color: #fff;
     letter-spacing: 1px;
+    transform: translateY(-200%);
+
 }
 
 .hero-section .hero-content button {
     margin: 0px;
+    transform: translateY(200%);
 
 }
 
-
 .feature-hero-section {
     position: absolute;
+    z-index: 2;
     bottom: 0;
     left: 5%;
     width: 90%;
-
 }
 
 .hero-section .feature-hero-section .feature-card {
@@ -255,7 +252,6 @@ header nav>ul li:hover {
     color: white;
     background-color: #0c1228;
     text-transform: uppercase;
-    transition: all 1s;
 
     h4 {
         font-size: 16px;
@@ -268,11 +264,16 @@ header nav>ul li:hover {
     }
 }
 
+.feature-card .details-content {
+    overflow: hidden;
+    height: 0;
+    transition: height 1s;
+}
+
 .feature-card p {
     font-size: 13px;
     line-height: 22px;
     text-transform: lowercase;
-    display: none;
 }
 
 .feature-card a {
@@ -283,21 +284,18 @@ header nav>ul li:hover {
     font-weight: 700;
     font-size: 14px;
     border-bottom: 2px solid #fff;
-    display: none;
-
 }
 
 .hero-section .feature-hero-section .feature-card:hover {
-    background-color: #EDA61A;
+    background-color: #eda61a;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 
-    a {
-        display: inline;
+    .details-content {
+        height: 220px;
     }
 
-    p {
-        display: block;
-    }
+
+
 }
 
 #course-feature h4::before {
@@ -312,7 +310,6 @@ header nav>ul li:hover {
     font-size: 24px;
     content: "\f19d";
     font-family: "FontAwesome";
-
 }
 
 #meeting-feature h4::before {
@@ -320,7 +317,6 @@ header nav>ul li:hover {
     font-size: 24px;
     content: "\f02d";
     font-family: "FontAwesome";
-
 }
 
 /* about section  */
@@ -369,14 +365,35 @@ header nav>ul li:hover {
     cursor: pointer;
 }
 
-.tab:hover {
-    color: #EDA61A;
+.selected-tab {
+    color: #eda61a;
+}
+
+.tab.selected-tab::after {
+    position: absolute;
+    top: 23px;
+    left: 66px;
+    margin: 10px 0;
+    content: "";
+    border: 2px solid #eda61a;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+}
+
+.tab.selected-tab::before {
+    background-color: #eda61a;
+    width: 12px;
+    height: 12px;
+
 }
 
 
-.tab::after {
+
+.tab::before {
     position: absolute;
-    top: 150%;
+    top: 27px;
     left: 70px;
     margin: 10px 0;
     content: "";
@@ -385,11 +402,7 @@ header nav>ul li:hover {
     background-color: white;
 }
 
-.tab:hover::after {
-    border: 2px solid transparent;
-    background-color: #EDA61A;
 
-}
 
 .why-choose-content {
     margin-top: 120px;
@@ -401,14 +414,20 @@ header nav>ul li:hover {
     margin-bottom: 60px;
 }
 
-.tab-details-content {
+.tab-details.appear {
+    display: block;
+}
 
+
+.tab-details {
+    display: none;
+}
+
+.tab-details-content {
     float: right;
     width: 49%;
     padding-left: 45px;
     box-sizing: border-box;
-
-
 }
 
 .tab-img-holder {
@@ -429,7 +448,6 @@ header nav>ul li:hover {
     letter-spacing: 1px;
     color: #fff;
     margin-bottom: 30px;
-
 }
 
 .tab-details-content p {
@@ -439,7 +457,7 @@ header nav>ul li:hover {
 }
 
 .tab-details-content a {
-    color: #3CF;
+    color: #3cf;
     font-size: 15px;
     line-height: 28px;
 }
@@ -479,7 +497,6 @@ header nav>ul li:hover {
     }
 }
 
-
 .register-title {
     padding: 40px;
     background-color: rgba(250, 250, 250, 0.2);
@@ -491,17 +508,12 @@ header nav>ul li:hover {
     text-align: center;
     line-height: 24px;
     font-weight: 500;
-
 }
 
 .register-body {
     padding: 60px 60px;
     background-color: rgba(250, 250, 250, 0.1);
 }
-
-
-
-
 
 .register-form button {
     display: inline-block;
@@ -548,7 +560,6 @@ header nav>ul li:hover {
     margin: 200px 0 50px 0;
     white-space: nowrap;
     vertical-align: top;
-
 }
 
 .course-card {
@@ -565,7 +576,6 @@ header nav>ul li:hover {
     }
 }
 
-
 .course-card h4 {
     margin: 0 0 20px 0;
 
@@ -577,11 +587,9 @@ header nav>ul li:hover {
 }
 
 .course-card p {
-
     margin: 0;
     font-size: 13px;
     line-height: 22px;
-
 }
 
 .course-card-img {
@@ -605,12 +613,9 @@ header nav>ul li:hover {
 
 .card-footer a::after {
     content: "\f101";
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     font-size: 11px;
-
-
 }
-
 
 .instructor-img {
     float: left;
@@ -625,7 +630,6 @@ header nav>ul li:hover {
         width: 100%;
         height: 100%;
     }
-
 }
 
 .indicators-container {
@@ -658,6 +662,7 @@ header nav>ul li:hover {
     float: left;
     width: 46%;
     color: white;
+    transform: translateX(-110%);
 
     span {
         text-transform: uppercase;
@@ -686,6 +691,8 @@ header nav>ul li:hover {
     position: relative;
     float: right;
     width: 46%;
+    transform: translateX(120%);
+
 }
 
 .presentation-video-container img {
@@ -716,7 +723,7 @@ header nav>ul li:hover {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #EDA61A;
+    background-color: #eda61a;
 }
 
 .video-caption .video-circle::after {
@@ -730,7 +737,6 @@ header nav>ul li:hover {
     border-left: 15px solid white;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-
 }
 
 /* contact section  */
